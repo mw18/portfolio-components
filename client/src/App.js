@@ -4,18 +4,16 @@ import Container from 'react-bootstrap/Container';
 import Button from 'react-bootstrap/Button';
 import ButtonToolbar from 'react-bootstrap/ButtonToolbar';
 import { LinkContainer } from 'react-router-bootstrap';
-// import Portfolio from './components/Project';
-// import Contact from './components/Contact';
+import Project from './components/Project';
+import Contact from './components/Contact';
 import Header from './components/Header';
-// import Footer from './components/Footer';
+import Footer from './components/Footer'
+
 
 
 import './App.css';
 
 const Home = () => <span>Home</span>;
-
-
-
 
 const App = () => (
   <MemoryRouter>
@@ -24,11 +22,11 @@ const App = () => (
       <h2>
         {/* Current Page is{' '} */}
         <Switch>
-          <Route path="/portfolio">
-            {/* <Portfolio /> */}
+          <Route path="/project">
+            <Project /> 
           </Route>
           <Route path="/contact">
-            {/* <Contact /> */}
+            <Contact />
           </Route>
           <Route path="/">
             <Home />
@@ -41,16 +39,15 @@ const App = () => (
           <LinkContainer to="/">
             <Button>Home</Button>
           </LinkContainer>
-          <LinkContainer to="/portfolio">
-            <Button>Portfolio</Button>
+          <LinkContainer to="/project">
+            <Button>Projects</Button>
           </LinkContainer>
           <LinkContainer to="/contact">
             <Button>Contact</Button>
           </LinkContainer>
         </ButtonToolbar>
-
+        <Footer/>
       </h2>
-
     </Container>
   </MemoryRouter>
 
